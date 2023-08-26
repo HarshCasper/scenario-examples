@@ -9,7 +9,6 @@ localstack start -d
 <br>
 
 ### Create an S3 bucket
-We port-forward to the Istio ingressgateway service:
 
 ```plain
 awslocal s3 mb s3://test
@@ -17,12 +16,21 @@ awslocal s3 mb s3://test
 
 ### Create a Lambda function
 
-Create a new Lambda ZIP:
+Install ZIP package:
 
 ```plain
 apt install zip
-echo 'def handler(*args, **kwargs):' > /tmp/testlambda.py
-echo '  print("Debug output from Lambda function")' >> /tmp/testlambda.py
+```{{exec}}
+
+Create new Lambda file:
+
+```plain
+echo 'def handler(*args, **kwargs):' > /tmp/testlambda.py && echo '  print("Debug output from Lambda function")' >> /tmp/testlambda.py
+```{{exec}}
+
+Package the Lambda:
+
+```plain
 (cd /tmp; zip testlambda.zip testlambda.py)
 ```{{exec}}
 
@@ -42,5 +50,10 @@ Wait for few seconds. Invoke the Lambda function
 
 ```plain
 awslocal invoke --function-name func1 output.txt
+```{{exec}}
+
+Show the contents of the output file
+
+```plain
 cat output.txt
 ```{{exec}}
