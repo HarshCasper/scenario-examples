@@ -1,0 +1,13 @@
+{
+  "title": "Playground",
+  "description": "This playground has LocalStack installed",
+  "details": {
+    "intro": {
+      "text": "init/init.md",
+      "foreground": "init/foreground.sh"
+    },
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
