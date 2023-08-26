@@ -49,7 +49,7 @@ awslocal lambda create-function \
 Wait for few seconds. Invoke the Lambda function
 
 ```plain
-awslocal invoke --function-name func1 output.txt
+awslocal lambda invoke --function-name func1 output.txt
 ```{{exec}}
 
 Show the contents of the output file
@@ -57,3 +57,4 @@ Show the contents of the output file
 ```plain
 cat output.txt
 ```{{exec}}
+
