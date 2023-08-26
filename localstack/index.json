@@ -2,6 +2,10 @@
 	"title": "Playground",
 	"description": "This playground has LocalStack installed",
 	"details": {
+		"steps": [{
+			"title": "Play with LocalStack",
+			"text": "step1/text.md"
+		}],
 		"intro": {
 			"text": "init/init.md",
 			"foreground": "init/foreground.sh"
