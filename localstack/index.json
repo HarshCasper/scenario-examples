@@ -1,10 +1,14 @@
 {
-	"title": "Playground",
+	"title": "LocalStack",
 	"description": "This playground has LocalStack installed",
 	"details": {
 		"steps": [{
 			"title": "Play with LocalStack",
 			"text": "step1/text.md"
+		},
+		{
+			"title": "Play with DynamoDB",
+			"text": "step2/text.md"
 		}],
 		"intro": {
 			"text": "init/init.md",
